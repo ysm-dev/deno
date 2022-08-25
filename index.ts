@@ -1,6 +1,8 @@
-import { serve } from 'https://deno.land/std@0.144.0/http/server.ts'
+import { serve } from 'https://deno.land/std/http/mod.ts'
 
-serve((req) => {
-  console.log(req)
-  return new Response('Hello World\n')
-})
+serve(
+  () => {
+    return Response.redirect('https://discord.com/invite/4y93ujhH', 307)
+  },
+  { port: 3000 },
+)
